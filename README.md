@@ -1,5 +1,4 @@
 # restful_clean
-
 **ES**:
 Este proyecto es parte de la prueba tecnica como desarrollador Flutter en Accentio Studios
 Esta prueba tecnica fue desarrollada con Flutter 3.13. y Dart 3.1.0
@@ -7,6 +6,8 @@ Esta prueba tecnica fue desarrollada con Flutter 3.13. y Dart 3.1.0
 **PT**:
 Este projeto faz parte do teste técnico como desenvolvedor Flutter na Accentio Studios
 Este teste técnico foi desenvolvido com Flutter 3.13. e Dart 3.1.0
+
+![Screen](assets/dogs_gif.gif)
 
 ## Requisitos
 
