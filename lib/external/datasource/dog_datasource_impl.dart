@@ -1,3 +1,4 @@
+
 import 'package:restful/infra/datasources/dog_datasource.dart';
 
 import '../../domain/services/http_service.dart';
@@ -9,10 +10,17 @@ class DogDatasourceImpl implements IDogDatasource {
   final IHttpService _http = HttpServiceImpl('https://dog.ceo');
 
   @override
-  Future<String> fetchDog() {
-    // TODO: implement fetchDog.
+  Future<String> fetchDog() async {
+    try {
+      var cepResult = {};
+      final response = await _http.get('/api/breeds/image/random');
+      cepResult = response.data;
+      return cepResult['message'];
+
+    }catch(e){
+      throw UnimplementedError('Error en $e');
+    }
     // endpoint: '/api/breeds/image/random'
     // Utiliza el metodo get de la clase HttpServiceImpl
-    throw UnimplementedError();
   }
 }

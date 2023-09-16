@@ -53,9 +53,17 @@ class _HomePageState extends State<HomePage> {
   }
 
   Future<void> loadDog() async {
-    // TODO: load a new dog
+    final dog = DogDatasourceImpl();
+    try {  
+      var url =  await dog.fetchDog();
+      setState(() {
+        _dogUrl = url;   
+      });
+    }catch(e){
+
+      throw UnimplementedError('Error en $e');
+    }
     // Aqui es donde se debe llamar al metodo fetchDog del repositorio, cargar la imagen y actualizar el estado con el nuevo url
     // Aqui é onde o método fetchDog do repositório deve ser chamado, a imagem carregada e o estado atualizado com o novo url
-    throw UnimplementedError();
   }
 }
